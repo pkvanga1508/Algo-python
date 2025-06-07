@@ -1,3 +1,9 @@
+#Node Depths
+# Problem: Given a binary tree, calculate the sum of the depths of all nodes.
+# A node's depth is defined as the number of edges from the root to the node.
+# The function should return the sum of the depths of all nodes in the tree.
+# The function should have a time complexity of O(n) where n is the number of nodes in the tree.
+# The function should have a space complexity of O(h) where h is the height of the tree.
 def nodeDepths(root):
     # Write your code here.
     return node_depths(root, 0)
