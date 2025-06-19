@@ -18,10 +18,10 @@ class Solution:
         curr_max = 0
         trapped_water = 0
         for index in range(len(height)):
-            lmax[index] = curr_max = max(curr_max, height[index])
+            lmax[index] = max(curr_max, height[index])
         curr_max = 0
         for index in reversed(range(len(height))):
-            rmax[index] = curr_max = max(curr_max, height[index])
+            rmax[index] = max(curr_max, height[index])
         for index in range(len(height)):
             trapped_water += min(lmax[index], rmax[index]) - height[index]
 

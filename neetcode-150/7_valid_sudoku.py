@@ -21,19 +21,16 @@ class Solution(object):
                     continue
 
                 if value in row_set[row]:
-                    print(row, col, value, row_set)
                     return False
                 row_set[row].add(value)
 
                 if value in col_set[col]:
-                    print(row, col, value, row_set)
                     return False
                 col_set[col].add(value)
 
                 box_set_index = ((row // 3) * 3) + (col // 3)
 
                 if value in box_set[box_set_index]:
-                    print(row, col, value, box_set)
                     return False
                 box_set[box_set_index].add(value)
 

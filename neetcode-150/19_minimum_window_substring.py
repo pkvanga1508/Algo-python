@@ -14,13 +14,11 @@ class Solution(object):
 
         for char in t:
             target_freq[char] =  target_freq.get(char, 0) + 1
-        print(target_freq)
 
         left = 0
         right = 0
         while right < len(s) :
             right_char = s[right]
-            print(left, right)
             if right_char in target_freq:
                 string_freq[right_char] = string_freq.get(right_char, 0) + 1
 

@@ -3,9 +3,7 @@ class Solution:
         start = 0
         end = len(nums) - 1
         while start <= end:
-            print(start, end)
             mid = (start + end) // 2
-            print(mid)
             start_val = nums[start]
             mid_val = nums[mid]
             end_val = nums[end]

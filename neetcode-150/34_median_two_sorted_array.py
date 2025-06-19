@@ -36,7 +36,7 @@ class Solution:
         end = len(nums1)
         while start <= end:
             num1split = (start + end) // 2 # We are moving the split on nums1 left or right based on start and end index
-            num2split = ((len(nums1) + len(nums2) + 1) // 2) - num1split #Split is based on num1split
+            num2split = ((len(nums1) + len(nums2) + 1) // 2) - num1split  #Split is based on num1split
 
             num1left = nums1[num1split - 1] if num1split > 0 else float("-inf")
             num1right = nums1[num1split] if num1split < len(nums1) else float("inf")
@@ -45,7 +45,6 @@ class Solution:
 
             if num1left <= num2right and num2left <= num1right:
                 if (len(nums1) + len(nums2)) % 2 == 0: #Even
-                    print(num1left, num2left, num1right, num2right)
                     return (max(num1left, num2left) + min(num1right, num2right)) / 2
                 else:
                     return max(num1left, num2left)

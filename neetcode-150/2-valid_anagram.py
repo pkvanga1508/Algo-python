@@ -31,7 +31,7 @@ class Solution(object):
             freq_list[ord(t[index]) - ord_char_a] -= 1
 
         for val in freq_list:
-            if val > 0:
+            if val != 0:
                 return False
 
         return True
